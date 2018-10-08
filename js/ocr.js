@@ -1,7 +1,5 @@
 var output_format = "jpg";
 var myImage = document.getElementById("pic");
-// var HERMITE = new Hermite_class();
-
 
 // Processes the image
 function processImg(){
@@ -50,7 +48,6 @@ function onFileSelected(event) {
     imgtag.src = event.target.result;
     selimg.src = event.target.result;
     //encode();
-    
   };
   reader.readAsDataURL(selectedFile);
 }
@@ -80,23 +77,6 @@ function handleSelect(selection){
 }
 document.getElementById("pic").addEventListener("load", processImg);
 
-/*
-$("#pic").click(function(){
-	if(responsiveVoice.isPlaying()) {
-		stopVoice();
-}
-else{
-	playVoice();
-}
-});*/
-
-// $('img#pic').imgAreaSelect({
-//     handles: true,
-//     onSelectEnd: function (img, selection) {
-//         handleSelect(selection);
-//     }
-// });
-
 function encode(){
 	var source_image = document.getElementById('pic');
     var result_image = document.getElementById('result_image');
@@ -110,13 +90,13 @@ function encode(){
 
     console.log("process start...");
     var time_start = new Date().getTime();
-    
+
     result_image.src = jic.compress(source_image,quality,output_format).src;
-    
+
     result_image.onload = function(){
     	var image_width=$(result_image).width(),
         image_height=$(result_image).height();
-   	        
+
         if(image_width > image_height){
         	result_image.style.width="320px";
         }else{
