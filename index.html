@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  
+    
+  </head>
+  <body  class="container">
+
+      <!-- Card for image -->
+      <div class="card">
+        <div class="" id="container">
+          <img class="responsive-img" id="pic" onclick="">
+        </div>
+        <div class="responsive-img" >
+          <img id="selected" style="display: none">
+        </div>
+
+        <div id='holder_result' >
+        <img class='responsive-img' id="result_image">
+        </div>
+      </div>
+        <!-- Get file -->
+        <div class="file-field input-field">
+          <div class="btn">
+
+            <span>File <i class="material-icons left">photo_camera</i></span>
+            <input type="file" id="file_img" accept="image/*" onchange="onFileSelected(event)" capture="camera">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+
+        <!-- 
+<input type="file" accept="image/*;capture=camera"> -->
+        <div class="card">
+          <a class="waves-effect waves-light btn green" onclick="playVoice();"><i class="material-icons left">play_arrow</i>Play</a>
+          <a class="waves-effect waves-light btn red" onclick="stopVoice();"><i class="material-icons left">stop</i>Stop</a>
+          <!-- <a class="waves-effect waves-light btn amber" onclick="pauseVoice();"><i class="material-icons left">pause</i>Pause</a>
+          <a class="waves-effect waves-light btn" onclick="resumeVoice();"><i class="material-icons left">rotate_right</i>Resume</a>
+          <a class="waves-effect waves-light btn" onclick="encode();"><i class="material-icons left">rotate_right</i>Encode</a> -->
+        </div>
+        <div class="">
+          <p class="flow-text" id="result"></p>
+          <div class="progress">
+              <div class="determinate" id="progress" style="width: 0%"></div>
+          </div>
+        </div>
+
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/jquery.imgareaselect.js">
+  <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+  <script src='https://cdn.rawgit.com/naptha/tesseract.js/1.0.10/dist/tesseract.js'></script>
+  <script src='js/responsivevoice.js'></script>
+  <script src="js/JIC.js"></script>
+
+  <script type="text/javascript" src="js/ocr.js"></script>
+
+</html>
